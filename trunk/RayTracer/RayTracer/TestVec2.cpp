@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 #include "vector2.h"
 
@@ -42,3 +43,4 @@ int main()
 	std::cout << std::endl << "a dot b" << Vector2i::Dot(a, b) << std::endl;
 	return 0;
 }
+*/

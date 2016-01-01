@@ -18,9 +18,15 @@
     <ClCompile Include="TestVec2.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="TestVec3.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\math\Vector2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\math\Vector3.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

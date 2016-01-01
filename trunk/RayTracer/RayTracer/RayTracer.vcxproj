@@ -80,9 +80,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="TestVec2.cpp" />
+    <ClCompile Include="TestVec3.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\math\Vector2.h" />
+    <ClInclude Include="include\math\Vector3.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

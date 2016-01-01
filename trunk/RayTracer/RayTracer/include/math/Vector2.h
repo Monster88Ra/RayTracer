@@ -16,7 +16,6 @@ public:
 	Vector2();
 	Vector2(T X);
 	Vector2(T X, T Y);
-	~Vector2();
 	
 	template<typename U> 
 	Vector2<T>& operator *= (const U &scalar);
@@ -32,10 +31,14 @@ public:
 	void Normalize();
 	float Length();
 	// square of length
-	float Length2();
+	float LengthSquare();
 	Vector2<T> Reflect(const Vector2<T> &normal) const;
 	static T Dot(const Vector2<T> &lhs, const Vector2<T> &rhs);
-	void Print();
+	friend std::ostream& operator << (const std::ostream &os, const Vector3<T> &vec) 
+	{
+		os << "[" << "X: " << x << "Y: " << y << "]";
+		return os;
+	}
 public:
 	T x;
 	T y;
@@ -168,10 +171,10 @@ inline float Vector2<T>::Length()
 template <typename T>
 inline void Vector2<T>::Normalize()
 {
-	float nor2 = Length2();
+	T nor2 = LengthSquare();
 	if (nor2 > 0)
 	{
-		float invNor = 1 / sqrt(nor2);
+		T invNor = 1 / sqrt(nor2);
 		x *= invNor;
 		y *= invNor;
 	}
