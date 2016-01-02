@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 #include "vector3.h"
 
@@ -45,3 +46,4 @@ int main()
 	std::cout << std::endl << "a cross b" << Vector3f::Cross(a, b) << std::endl;
 	return 0;
 }
+*/

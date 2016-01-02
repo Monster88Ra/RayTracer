@@ -48,7 +48,7 @@ public:
 	T y;
 	T z;
 };
-
+#endif//_VECTOR3_H
 
 using Vector3i = Vector3<int32_t>;	/* Vector type for integers */
 using Vector3f = Vector3<float>; /* Vector type for floats */
@@ -248,4 +248,3 @@ inline Vector3<T> operator / (const Vector3<T> &vec, const U &scalar)
 	return Vector3<T>(vec.x / scalar, vec.y / scalar, vec.z / scalar);
 }
 
-#endif//_VECTOR3_H

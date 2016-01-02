@@ -43,6 +43,7 @@ public:
 	T x;
 	T y;
 };
+#endif//_VECTOR2_H
 
 // c++ 11
 using Vector2i = Vector2<int32_t>;
@@ -157,7 +158,7 @@ const inline T& Vector2<T>::operator[] (std::size_t index) const
 }
 
 template <typename T>
-inline float Vector2<T>::Length2()
+inline float Vector2<T>::LengthSquare()
 {
 	return x*x + y*y;
 }
@@ -237,4 +238,3 @@ inline Vector2<T> operator / (const U &scalar, const Vector2<T> &vec)
 {
 	return Vector2<T>(scalar/vec.x , scalar/vec.y );
 }
-#endif//_VECTOR2_H
