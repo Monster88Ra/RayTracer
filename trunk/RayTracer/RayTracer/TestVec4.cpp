@@ -1,4 +1,4 @@
-
+/*
 #include <iostream>
 #include "Vector4.h"
 
@@ -50,3 +50,4 @@ int main()
 	std::cout << std::endl << "a cross b" << Vector4f::Cross(a, b) << std::endl;
 	return 0;
 }
+*/

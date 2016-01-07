@@ -1,5 +1,4 @@
-#ifndef _VECTOR3_H
-#define _VECTOR3_H
+#pragma once
 
 #include <cstdint>
 #include <cmath>
@@ -29,7 +28,7 @@ public:
 	T& operator[] (std::size_t index);
 	const T& operator[] (std::size_t index) const;
 
-	void Normalize();
+	Vector3<T>& Normalize();
 	float Length();
 	float LengthSquare();
 
@@ -48,7 +47,7 @@ public:
 	T y;
 	T z;
 };
-#endif//_VECTOR3_H
+
 
 using Vector3i = Vector3<int32_t>;	/* Vector type for integers */
 using Vector3f = Vector3<float>; /* Vector type for floats */
@@ -132,7 +131,7 @@ inline bool Vector3<T>::operator!=(const Vector3<T>& rhs) const
 }
 
 template<typename T>
-inline T & Vector3<T>::operator[](std::size_t index)
+inline T&  Vector3<T>::operator[](std::size_t index)
 {
 	switch (index)
 	{
@@ -148,7 +147,7 @@ inline T & Vector3<T>::operator[](std::size_t index)
 }
 
 template<typename T>
-inline const T & Vector3<T>::operator[](std::size_t index) const
+inline const T&  Vector3<T>::operator[](std::size_t index) const
 {
 	switch (index)
 	{
@@ -164,7 +163,7 @@ inline const T & Vector3<T>::operator[](std::size_t index) const
 }
 
 template<typename T>
-inline void Vector3<T>::Normalize()
+inline Vector3<T>& Vector3<T>::Normalize()
 {
 	T nor2 = LengthSquare();
 	if (nor2 > 0)
@@ -174,6 +173,7 @@ inline void Vector3<T>::Normalize()
 		y *= invNor;
 		z *= invNor;
 	}
+	return *this;
 }
 
 template<typename T>
@@ -247,4 +247,5 @@ inline Vector3<T> operator / (const Vector3<T> &vec, const U &scalar)
 {
 	return Vector3<T>(vec.x / scalar, vec.y / scalar, vec.z / scalar);
 }
+
 

@@ -1,6 +1,7 @@
 #ifndef _VECTOR4_H
 #define _VECTOR4_H
 
+
 #include <cstdint>
 #include <cmath>
 #include <iostream>
@@ -67,7 +68,7 @@ using Vector4f = Vector4<float>; /* Vector type for floats */
 /*****************************
 * Inlined Member Functions
 ******************************/
-#endif//_VECTOR4_H
+//#endif//_VECTOR4_H
 
 template<typename T>
 inline Vector4<T>::Vector4():
@@ -283,3 +284,5 @@ inline Vector4<T> operator/(const Vector4<T>& vec, const U& scalar)
 {
 	return Vector4<T>(vec.x / scalar, vec.y / scalar, vec.z / scalar, vec.w / scalar);
 }
+
+#endif //_VECTOR4_H

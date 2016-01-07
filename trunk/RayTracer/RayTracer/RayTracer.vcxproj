@@ -79,14 +79,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="TestMat.cpp" />
     <ClCompile Include="TestVec2.cpp" />
     <ClCompile Include="TestVec3.cpp" />
     <ClCompile Include="TestVec4.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\math\MathUtiliy.h" />
+    <ClInclude Include="include\math\Matrix4.h" />
     <ClInclude Include="include\math\Vector2.h" />
     <ClInclude Include="include\math\Vector3.h" />
     <ClInclude Include="include\math\Vector4.h" />
+    <ClInclude Include="include\Ray.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

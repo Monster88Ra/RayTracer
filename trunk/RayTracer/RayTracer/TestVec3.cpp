@@ -44,6 +44,9 @@ int main()
 	std::cout << std::endl << "a dot b" << Vector3f::Dot(a, b) << std::endl;
 
 	std::cout << std::endl << "a cross b" << Vector3f::Cross(a, b) << std::endl;
+
+	a[0] = 0;
+	std::cout << "a.x = 0" << a[0] << std::endl;
 	return 0;
 }
 */

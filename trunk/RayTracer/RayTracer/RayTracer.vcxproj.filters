@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="头文件\math">
+      <UniqueIdentifier>{3e6448be-6d02-41ff-b568-919cb1b18196}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TestVec2.cpp">
@@ -24,16 +27,28 @@
     <ClCompile Include="TestVec4.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="TestMat.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\math\MathUtiliy.h">
+      <Filter>头文件\math</Filter>
+    </ClInclude>
     <ClInclude Include="include\math\Vector2.h">
-      <Filter>头文件</Filter>
+      <Filter>头文件\math</Filter>
     </ClInclude>
     <ClInclude Include="include\math\Vector3.h">
-      <Filter>头文件</Filter>
+      <Filter>头文件\math</Filter>
     </ClInclude>
     <ClInclude Include="include\math\Vector4.h">
+      <Filter>头文件\math</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Ray.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\math\Matrix4.h">
+      <Filter>头文件\math</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,5 +1,4 @@
-#ifndef _VECTOR2_H
-#define _VECTOR2_H
+#pragma once
 
 #include <cstdint>
 #include <cmath>
@@ -28,7 +27,7 @@ public:
 	T& operator[] (std::size_t index);
 	const T& operator[] (std::size_t index) const;
 
-	void Normalize();
+	Vector2<T>& Normalize();
 	float Length();
 	// square of length
 	float LengthSquare();
@@ -43,7 +42,7 @@ public:
 	T x;
 	T y;
 };
-#endif//_VECTOR2_H
+
 
 // c++ 11
 using Vector2i = Vector2<int32_t>;
@@ -170,7 +169,7 @@ inline float Vector2<T>::Length()
 }
 
 template <typename T>
-inline void Vector2<T>::Normalize()
+inline Vector2<T>& Vector2<T>::Normalize()
 {
 	T nor2 = LengthSquare();
 	if (nor2 > 0)
@@ -179,6 +178,7 @@ inline void Vector2<T>::Normalize()
 		x *= invNor;
 		y *= invNor;
 	}
+	return *this;
 }
 
 template <typename T>
@@ -238,3 +238,4 @@ inline Vector2<T> operator / (const U &scalar, const Vector2<T> &vec)
 {
 	return Vector2<T>(scalar/vec.x , scalar/vec.y );
 }
+
