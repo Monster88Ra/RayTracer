@@ -16,6 +16,9 @@
     <Filter Include="头文件\math">
       <UniqueIdentifier>{3e6448be-6d02-41ff-b568-919cb1b18196}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\materials">
+      <UniqueIdentifier>{dfc92868-76ce-40d0-952f-2d991918647f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TestVec2.cpp">
@@ -49,6 +52,12 @@
     </ClInclude>
     <ClInclude Include="include\math\Matrix4.h">
       <Filter>头文件\math</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AABB.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\materials\Color.h">
+      <Filter>头文件\materials</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
