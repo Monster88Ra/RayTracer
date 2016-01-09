@@ -79,6 +79,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Color.cpp" />
+    <ClCompile Include="src\Texture.cpp" />
     <ClCompile Include="TestMat.cpp" />
     <ClCompile Include="TestVec2.cpp" />
     <ClCompile Include="TestVec3.cpp" />
@@ -87,6 +89,8 @@
   <ItemGroup>
     <ClInclude Include="include\AABB.h" />
     <ClInclude Include="include\materials\Color.h" />
+    <ClInclude Include="include\materials\Material.h" />
+    <ClInclude Include="include\materials\Texture.h" />
     <ClInclude Include="include\math\MathUtiliy.h" />
     <ClInclude Include="include\math\Matrix4.h" />
     <ClInclude Include="include\math\Vector2.h" />
