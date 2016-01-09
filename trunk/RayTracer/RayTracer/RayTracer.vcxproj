@@ -41,6 +41,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);include/;</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -49,11 +50,12 @@
     <ClCompile>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>Level4</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir).\include;$(ProjectDir).\include\math;$(ProjectDir).\include\materials;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir).\include;$(ProjectDir).\include\math;$(ProjectDir).\include\materials;$(ProjectDir).\include\objects;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>$(ProjectDir).\include;%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -80,6 +82,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\Color.cpp" />
+    <ClCompile Include="src\Cube.cpp" />
+    <ClCompile Include="src\Object.cpp" />
     <ClCompile Include="src\Texture.cpp" />
     <ClCompile Include="TestMat.cpp" />
     <ClCompile Include="TestVec2.cpp" />
@@ -88,6 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\AABB.h" />
+    <ClInclude Include="include\Intersection.h" />
     <ClInclude Include="include\materials\Color.h" />
     <ClInclude Include="include\materials\Material.h" />
     <ClInclude Include="include\materials\Texture.h" />
@@ -96,6 +101,9 @@
     <ClInclude Include="include\math\Vector2.h" />
     <ClInclude Include="include\math\Vector3.h" />
     <ClInclude Include="include\math\Vector4.h" />
+    <ClInclude Include="include\objects\Cube.h" />
+    <ClInclude Include="include\objects\Intersection.h" />
+    <ClInclude Include="include\objects\object.h" />
     <ClInclude Include="include\Ray.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -43,8 +43,8 @@ Color Texture::GetSample(float U, float V) const
 
 	float If, Jf;
 
-	const float fracI = modf(uint32_t(U * m_Width) % m_Width - 0.5f, &I);
-	const float fracJ = modf(uint32_t(U * m_Height) % m_Height - 0.5f, &J);
+	const float fracI = modf(uint32_t(U * m_Width) % m_Width - 0.5f, &If);
+	const float fracJ = modf(uint32_t(U * m_Height) % m_Height - 0.5f, &Jf);
 
 	const uint32_t I = (uint32_t)(If);
 	const uint32_t J = (uint32_t)(Jf);

@@ -22,7 +22,6 @@ struct TextureInfo
 class Material
 {
 public:
-	Material();
 	Material(	Color specular = Color(0.0f, 0.0f, 0.0f),
 				Color diffuse = Color(0.7f, 0.7f, 0.7f),
 				Color ambient = Color(0.1f, 0.1f, 0.1f),
@@ -59,16 +58,6 @@ private:
 	TextureInfo m_DiffuseTextureInfo;
 };
 
-Material::Material():
-	m_SpecularColor(0.0f,0.0f,0.0f),
-	m_DiffuseColor(0.7f, 0.7f, 0.7f),
-	m_AmbientColor(0.1f, 0.1f, 0.1f),
-	m_Glossiness(0.0f),
-	m_Reflectivity(0.0f),
-	m_RefractiveIndex(1.0f)
-{
-	
-}
 
 inline Material::Material(Color specular, Color diffuse, Color ambient, float glossiness, float reflectivity, float refractiveIndex):
 	m_SpecularColor(specular),

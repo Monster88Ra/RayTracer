@@ -22,6 +22,9 @@
     <Filter Include="源文件\src">
       <UniqueIdentifier>{aaa6b0f0-51ce-46c8-b5fb-1772fb19dc78}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\objects">
+      <UniqueIdentifier>{17da0c18-2d3e-43df-b5ba-84ff844d695d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TestVec2.cpp">
@@ -40,6 +43,12 @@
       <Filter>源文件\src</Filter>
     </ClCompile>
     <ClCompile Include="src\Texture.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Object.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Cube.cpp">
       <Filter>源文件\src</Filter>
     </ClCompile>
   </ItemGroup>
@@ -73,6 +82,18 @@
     </ClInclude>
     <ClInclude Include="include\materials\Material.h">
       <Filter>头文件\materials</Filter>
+    </ClInclude>
+    <ClInclude Include="include\objects\object.h">
+      <Filter>头文件\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\objects\Cube.h">
+      <Filter>头文件\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\objects\Intersection.h">
+      <Filter>头文件\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Intersection.h">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
