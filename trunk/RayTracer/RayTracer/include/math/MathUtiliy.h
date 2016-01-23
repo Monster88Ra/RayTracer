@@ -12,7 +12,7 @@ enum  class EAxis
 	Z
 };
 
-void UpdateBounds(Vector3f& CurrentMin, Vector3f& CurrentMax, const Vector3f& NewPoint)
+inline void UpdateBounds(Vector3f& CurrentMin, Vector3f& CurrentMax, const Vector3f& NewPoint)
 {
 	for (int i = 0; i < 3; i++)
 	{
@@ -26,7 +26,7 @@ void UpdateBounds(Vector3f& CurrentMin, Vector3f& CurrentMax, const Vector3f& Ne
 		}
 	}
 }
-void ComputeBarycentricCoords3d(const Vector3f& V0,
+inline void ComputeBarycentricCoords3d(const Vector3f& V0,
 	const Vector3f& V1,
 	const Vector3f& V2,
 	const Vector3f& SurfacePoint,

@@ -1,10 +1,10 @@
-#pragma
+#pragma once
 #include "object.h"
 // Construct a renderable 3d cube
 class Cube:public Object
 {
 public:
-	Cube(Vector3f center,Material &lightingMaterial);
+	Cube(Vector3f center,Material lightingMaterial);
 	~Cube();
 
 	bool IsIntersectingRay(Ray ray, float *out_ValueT = nullptr, Intersection *out_Intersection = nullptr) override;

@@ -25,20 +25,11 @@
     <Filter Include="头文件\objects">
       <UniqueIdentifier>{17da0c18-2d3e-43df-b5ba-84ff844d695d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\lights">
+      <UniqueIdentifier>{0475a28c-5cf1-4c08-99d5-c2fafb5d4031}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TestVec2.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="TestVec3.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="TestVec4.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="TestMat.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="src\Color.cpp">
       <Filter>源文件\src</Filter>
     </ClCompile>
@@ -49,6 +40,42 @@
       <Filter>源文件\src</Filter>
     </ClCompile>
     <ClCompile Include="src\Cube.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Plane.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sphere.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Triangle.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Light.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DirectionalLight.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PointLight.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\KDTree.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Mesh.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Camera.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Scene.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Image.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
       <Filter>源文件\src</Filter>
     </ClCompile>
   </ItemGroup>
@@ -93,6 +120,39 @@
       <Filter>头文件\objects</Filter>
     </ClInclude>
     <ClInclude Include="include\Intersection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\objects\Plane.h">
+      <Filter>头文件\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\objects\Sphere.h">
+      <Filter>头文件\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\objects\Triangle.h">
+      <Filter>头文件\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lights\light.h">
+      <Filter>头文件\lights</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lights\DirectionalLight.h">
+      <Filter>头文件\lights</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lights\PointLight.h">
+      <Filter>头文件\lights</Filter>
+    </ClInclude>
+    <ClInclude Include="include\KDTree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Mesh.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Camera.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Scene.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Image.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

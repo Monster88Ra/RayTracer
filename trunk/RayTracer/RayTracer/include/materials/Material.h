@@ -9,14 +9,6 @@ struct TextureInfo
 	Texture *texture;
 	float UAxisScale;
 	float VAxisScale;
-
-	TextureInfo():
-		texture(NULL),
-		UAxisScale(0.0f),
-		VAxisScale(0.0f)
-	{
-
-	}
 };
 
 class Material
@@ -72,7 +64,7 @@ inline Material::Material(Color specular, Color diffuse, Color ambient, float gl
 	assert(reflectivity <= 1 && reflectivity >= 0);
 }
 
-Material::~Material()
+inline Material::~Material()
 {
 }
 

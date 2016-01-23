@@ -1,9 +1,8 @@
 #include "Cube.h"
 #include "Intersection.h"
-
 #include <limits>
 
-Cube::Cube(Vector3f center, Material &lightingMaterial):
+Cube::Cube(Vector3f center, Material lightingMaterial):
 	Object(lightingMaterial)
 {
 	SetLocalOrigin(center);
@@ -16,7 +15,7 @@ Cube::~Cube()
 
 bool Cube::IsIntersectingRay(Ray ray, float * out_ValueT, Intersection * out_Intersection)
 {
-	if (!IsEnable)
+	if (!IsEnable())
 	{
 		return false;
 	}
@@ -25,7 +24,7 @@ bool Cube::IsIntersectingRay(Ray ray, float * out_ValueT, Intersection * out_Int
 	const float originalT = (out_ValueT) ? *out_ValueT : 0;
 
 	// transform ray to world space
-	ray = GetWorldTransform().TransformRay(ray);
+	ray = GetWorldInvTransform().TransformRay(ray);
 
 	const bool isIntersecting = GetBoundingBox().IsIntersectingRay(ray, out_ValueT);
 	if (isIntersecting && out_Intersection && originalT > *out_ValueT)
@@ -76,7 +75,7 @@ Material Cube::GetMaterial(Vector3f surfacePoint)
 	return m_Material;
 }
 
-void Cube::ConstructIntersection(const Vector3f & intersectionPoint, Intersection * intersectionOut)
+void Cube::ConstructIntersection(const Vector3f & intersectionPoint, Intersection *intersectionOut)
 {
 	float largestSide = 0;
 	int intersectionAxis = 0;

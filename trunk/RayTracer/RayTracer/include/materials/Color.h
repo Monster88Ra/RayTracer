@@ -20,8 +20,8 @@ public:
 	Color& operator *= (const float scalar);
 	Color& operator /= (const float scalar);
 
-	bool operator == (const Color &rhs);
-	bool operator != (const Color &rhs);
+	bool operator == (const Color &rhs) const;
+	bool operator != (const Color &rhs) const;
 
 	float& operator [] (std::size_t index);
 	const float& operator [] (std::size_t index) const;
@@ -43,12 +43,12 @@ public:
 * Inlined Member Functions
 ******************************/
 inline Color::Color():
-	m_A(0.0f),m_B(0.0f),m_G(0.0f),m_R(0.0f)
+	m_A(1.0f),m_B(0.0f),m_G(0.0f),m_R(0.0f)
 {
 }
 
 inline Color::Color(float R, float G, float B):
-	m_R(R),m_G(G),m_B(B)
+	m_R(R),m_G(G),m_B(B),m_A(1.0f)
 {
 }
 
@@ -62,7 +62,7 @@ inline Color::Color(const Color & rhs):
 {
 }
 
-Color::~Color()
+inline Color::~Color()
 {
 }
 
@@ -112,12 +112,12 @@ inline Color & Color::operator/=(const float scalar)
 	return *this;
 }
 
-inline bool Color::operator==(const Color & rhs)
+inline bool Color::operator==(const Color & rhs) const
 {
 	return (m_R == rhs.m_R && m_G == rhs.m_G && m_B == rhs.m_B && m_A == rhs.m_A);
 }
 
-inline bool Color::operator!=(const Color & rhs)
+inline bool Color::operator!=(const Color & rhs) const
 {
 	return !(*this == rhs);
 }
@@ -146,9 +146,9 @@ inline const float& Color::operator[](std::size_t index) const
 
 inline Color & Color::Clamp()
 {
-	m_R = std::min(m_R, 1.0f);
-	m_G = std::min(m_G, 1.0f);
-	m_B = std::min(m_B, 1.0f);
+	m_R = (std::min)(m_R, 1.0f);
+	m_G = (std::min)(m_G, 1.0f);
+	m_B = (std::min)(m_B, 1.0f);
 
 	return *this;
 }

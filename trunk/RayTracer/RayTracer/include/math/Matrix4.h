@@ -81,9 +81,9 @@ public:
 inline Matrix4 operator * (const  Matrix4 &lhs, const Matrix4 &rhs)
 {
 	Matrix4 result;
-	for (int row = 0; row < 3; row++)
+	for (int row = 0; row < 4; row++)
 	{
-		for (int col = 0; col < 3; col++)
+		for (int col = 0; col < 4; col++)
 		{
 			result.m[row][col] = Vector4f::Dot4(lhs.GetRow(row), rhs.GetColum(col));
 		}
@@ -289,7 +289,7 @@ inline Vector3f Matrix4::TransformPosition(const Vector3f & pos) const
 inline Ray Matrix4::TransformRay(Ray ray) const
 {
 	ray.origin = TransformPosition(ray.origin);
-	ray.direction = TransformPosition(ray.direction);
+	ray.direction = TransformDirection(ray.direction);
 	return ray;
 }
 
@@ -538,7 +538,7 @@ struct LookAtMatrix:public Matrix4
 	LookAtMatrix& operator = (const Matrix4 &rhs);
 };
 
-LookAtMatrix::LookAtMatrix(const Vector3f &eye, const Vector3f &lookLocation, const Vector3f &upDirection)
+inline LookAtMatrix::LookAtMatrix(const Vector3f &eye, const Vector3f &lookLocation, const Vector3f &upDirection)
 {
 	Vector3f n = -(lookLocation - eye).Normalize();
 	Vector3f u = Vector3f::Cross(n, upDirection).Normalize();

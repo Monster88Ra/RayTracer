@@ -90,9 +90,9 @@ inline Vector3<T>& Vector3<T>::operator *= (const U &scalar)
 template<typename T>
 inline Vector3<T>& Vector3<T>::operator+= (const Vector3<T> &rhs)
 {
-	x += rhs;
-	y += rhs;
-	z += rhs;
+	x += rhs.x;
+	y += rhs.y;
+	z += rhs.z;
 
 	return *this;
 }
@@ -165,6 +165,7 @@ inline const T&  Vector3<T>::operator[](std::size_t index) const
 template<typename T>
 inline Vector3<T>& Vector3<T>::Normalize()
 {
+	/*
 	T nor2 = LengthSquare();
 	if (nor2 > 0)
 	{
@@ -173,7 +174,8 @@ inline Vector3<T>& Vector3<T>::Normalize()
 		y *= invNor;
 		z *= invNor;
 	}
-	return *this;
+	*/
+	return *this /= Length();
 }
 
 template<typename T>

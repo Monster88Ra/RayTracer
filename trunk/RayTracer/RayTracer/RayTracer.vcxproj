@@ -54,7 +54,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir).\include;$(ProjectDir).\include\math;$(ProjectDir).\include\materials;$(ProjectDir).\include\objects;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir).\include;$(ProjectDir).\include\math;$(ProjectDir).\include\materials;$(ProjectDir).\include\objects;$(ProjectDir).\include\lights;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalUsingDirectories>$(ProjectDir).\include;%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
     </ClCompile>
     <Link>
@@ -81,18 +81,32 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Camera.cpp" />
     <ClCompile Include="src\Color.cpp" />
     <ClCompile Include="src\Cube.cpp" />
+    <ClCompile Include="src\DirectionalLight.cpp" />
+    <ClCompile Include="src\Image.cpp" />
+    <ClCompile Include="src\KDTree.cpp" />
+    <ClCompile Include="src\Light.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Mesh.cpp" />
     <ClCompile Include="src\Object.cpp" />
+    <ClCompile Include="src\Plane.cpp" />
+    <ClCompile Include="src\PointLight.cpp" />
+    <ClCompile Include="src\Scene.cpp" />
+    <ClCompile Include="src\Sphere.cpp" />
     <ClCompile Include="src\Texture.cpp" />
-    <ClCompile Include="TestMat.cpp" />
-    <ClCompile Include="TestVec2.cpp" />
-    <ClCompile Include="TestVec3.cpp" />
-    <ClCompile Include="TestVec4.cpp" />
+    <ClCompile Include="src\Triangle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\AABB.h" />
+    <ClInclude Include="include\Camera.h" />
+    <ClInclude Include="include\Image.h" />
     <ClInclude Include="include\Intersection.h" />
+    <ClInclude Include="include\KDTree.h" />
+    <ClInclude Include="include\lights\DirectionalLight.h" />
+    <ClInclude Include="include\lights\light.h" />
+    <ClInclude Include="include\lights\PointLight.h" />
     <ClInclude Include="include\materials\Color.h" />
     <ClInclude Include="include\materials\Material.h" />
     <ClInclude Include="include\materials\Texture.h" />
@@ -101,10 +115,15 @@
     <ClInclude Include="include\math\Vector2.h" />
     <ClInclude Include="include\math\Vector3.h" />
     <ClInclude Include="include\math\Vector4.h" />
+    <ClInclude Include="include\Mesh.h" />
     <ClInclude Include="include\objects\Cube.h" />
     <ClInclude Include="include\objects\Intersection.h" />
     <ClInclude Include="include\objects\object.h" />
+    <ClInclude Include="include\objects\Plane.h" />
+    <ClInclude Include="include\objects\Sphere.h" />
+    <ClInclude Include="include\objects\Triangle.h" />
     <ClInclude Include="include\Ray.h" />
+    <ClInclude Include="include\Scene.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -209,7 +209,7 @@ void Object::SetEnable(bool flag)
 	m_IsEnable = flag;
 }
 
-void Object::SetBoundingBox(AABB &boundingBox)
+void Object::SetBoundingBox(AABB boundingBox)
 {
 	m_BoundingBox = boundingBox;
 }

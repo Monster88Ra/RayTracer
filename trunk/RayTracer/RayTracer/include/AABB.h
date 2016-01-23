@@ -12,7 +12,6 @@ class  AABB
 {
 public:
 	AABB(Vector3f minBound = Vector3f(), Vector3f maxBound = Vector3f());
-	~ AABB();
 
 	bool IsIntersectingRay(Ray ray, float *out_ValueT = nullptr);
 
@@ -21,18 +20,14 @@ public:
 public:
 	Vector3f min, max;
 };
-AABB::AABB(Vector3f minBound = Vector3f(), Vector3f maxBound = Vector3f()):
+inline AABB::AABB(Vector3f minBound , Vector3f maxBound ):
 	min(minBound),max(maxBound)
 {
 
 }
 
-AABB::~AABB()
-{
 
-}
-
-bool AABB::IsIntersectingRay(Ray ray, float *out_ValueT = nullptr)
+inline bool AABB::IsIntersectingRay(Ray ray, float *out_ValueT )
 {
 	// a better way is Fast Ray-Box Intersection by Andrew Woo from "Graphics Gems", Academic Press, 1990
 	/**
@@ -92,12 +87,12 @@ bool AABB::IsIntersectingRay(Ray ray, float *out_ValueT = nullptr)
 	return true;
 }
 
-Vector3f AABB::GetCenter() const
+inline Vector3f AABB::GetCenter() const
 {
 	return Vector3f(min + max) * 0.5;
 }
 
-Vector3f AABB::GetDeminsions() const
+inline Vector3f AABB::GetDeminsions() const
 {
 	return max - min;
 }

@@ -54,7 +54,7 @@ public:
 	void SetEnable(bool flag);
 
 protected:
-	void SetBoundingBox(AABB &boundingBox);
+	void SetBoundingBox(AABB boundingBox);
 private:
 	virtual void ConstructAABB(Vector3f min = Vector3f(), Vector3f max = Vector3f()) = 0;
 protected:

@@ -165,6 +165,7 @@ inline const T & Vector4<T>::operator[](std::size_t index) const
 template<typename T>
 inline Vector4<T>& Vector4<T>::Normalize3()
 {
+	/*
 	T nor2 = LengthSquare3();
 	if (nor2 > 0)
 	{
@@ -173,7 +174,9 @@ inline Vector4<T>& Vector4<T>::Normalize3()
 		y *= invNor;
 		z *= invNor;
 	}
-	return *this;
+	*/
+	float invLength = 1.0f / Length3();
+	return *this *= invLength;
 }
 
 template<typename T>

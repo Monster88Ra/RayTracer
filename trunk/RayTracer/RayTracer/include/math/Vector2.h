@@ -15,6 +15,7 @@ public:
 	Vector2();
 	Vector2(T X);
 	Vector2(T X, T Y);
+	~Vector2();
 	
 	template<typename U> 
 	Vector2<T>& operator *= (const U &scalar);
@@ -27,13 +28,14 @@ public:
 	T& operator[] (std::size_t index);
 	const T& operator[] (std::size_t index) const;
 
-	Vector2<T>& Normalize();
+	void Normalize();
 	float Length();
 	// square of length
 	float LengthSquare();
 	Vector2<T> Reflect(const Vector2<T> &normal) const;
 	static T Dot(const Vector2<T> &lhs, const Vector2<T> &rhs);
-	friend std::ostream& operator << (const std::ostream &os, const Vector3<T> &vec) 
+
+	friend std::ostream& operator << (const std::ostream &os, const Vector2<T> &vec) 
 	{
 		os << "[" << "X: " << x << "Y: " << y << "]";
 		return os;
@@ -169,8 +171,9 @@ inline float Vector2<T>::Length()
 }
 
 template <typename T>
-inline Vector2<T>& Vector2<T>::Normalize()
+inline void  Vector2<T>::Normalize()
 {
+	/*
 	T nor2 = LengthSquare();
 	if (nor2 > 0)
 	{
@@ -178,15 +181,17 @@ inline Vector2<T>& Vector2<T>::Normalize()
 		x *= invNor;
 		y *= invNor;
 	}
-	return *this;
-}
+	*/
 
+	*this/ Length;
+}
+/*
 template <typename T>
 void Vector2<T>::Print()
 {
 	std::cout << "X:" << x << " " << "Y:" << y;
 }
-
+*/
 template <typename T>
 inline T Vector2<T>::Dot(const Vector2<T> &lhs,const Vector2<T> &rhs)
 {
