@@ -1,0 +1,149 @@
+Background: 0 0 0
+GlobalAmbient: .2 .2 .2
+
+Texture
+	Name: Tile
+	File: Textures/FloorTile.tga
+
+Texture
+	Name: BoxMan
+	File: Textures/Danbotexture.tga
+
+Texture
+	Name: Bricks
+	File: Textures/Bricks.tga
+
+Material
+	Name: BoxMan
+	Specular: .1 .1 .1 1.0
+	Diffuse: .1 .1 .1 1.0
+	Ambient: .1 .1 .1 1.0
+	Glossiness: 12
+	Reflectivity: .0
+	RefractiveIndex: 1.0
+	DiffuseTextureName: BoxMan
+	UVScale: 1 1
+
+Material
+	Name: Floor
+	Specular: .9 .9 .9 1.0
+	Diffuse: .9 .9 .9 1.0
+	Ambient: .1 .1 .1 1.0
+	Glossiness: 128
+	Reflectivity: .7
+	RefractiveIndex: 1.0
+	DiffuseTextureName: Tile
+	UVScale: .5 .5
+
+Material
+	Name: BrickWall
+	Specular: .1 .1 .1 1.0
+	Diffuse: .9 .1 .1 1.0
+	Ambient: .1 .1 .1 1.0
+	Glossiness: 1
+	Reflectivity: 0
+	RefractiveIndex: 1.0
+	DiffuseTextureName: Bricks
+	UVScale: .5 .5
+
+Material
+	Name: Refractive
+	Specular: .9 .9 .9 1.0
+	Diffuse: .9 .9 .9 0.3
+	Ambient: .1 .1 .1 1.0
+	Glossiness: 256
+	Reflectivity: .9
+	RefractiveIndex: 1.5
+	DiffuseTextureName: none
+	UVScale: 1 1
+
+Camera
+	Position: 0 6 18
+	LookAt: 0 2 0
+	UpDirection: 0 1 0
+	FOV: 75
+
+PointLight
+	Color: 1 1 1
+	Position: 1 9 3
+	SurfaceRadius: 1
+	MinFalloff: 2
+	MaxFalloff: 35
+
+PointLight
+	Color: .5 .1 .7
+	Position: 10 7 -1
+	SurfaceRadius: 2
+	MinFalloff: 1
+	MaxFalloff: 20
+
+PointLight
+	Color: .5 .1 .7
+	Position: -10 7 -1
+	SurfaceRadius: 2
+	MinFalloff: 1
+	MaxFalloff: 20
+
+Model
+	ModelFile: Models/BoxMan.obj
+	Material: BoxMan
+	Position: 0 4 -3.25
+	Rotation: 0 0 0
+	Scale: 1 1 1
+
+Model
+	ModelFile: Models/BoxMan.obj
+	Material: BoxMan
+	Position: 4 3 -2.5
+	Rotation: 0 -25 0
+	Scale: .75 .75 .75
+
+Model
+	ModelFile: Models/BoxMan.obj
+	Material: BoxMan
+	Position: -4 3 -2.5
+	Rotation: 0 25 0
+	Scale: .75 .75 .75
+
+Model
+	ModelFile: Models/BoxMan.obj
+	Material: BoxMan
+	Position: 7 4 -1.25
+	Rotation: 0 25 0
+	Scale: .5 .5 .5
+
+Model
+	ModelFile: Models/BoxMan.obj
+	Material: BoxMan
+	Position: -7 4 -1.25
+	Rotation: 0 -25 0
+	Scale: .5 .5 .5
+
+Cube
+	Position: 0 2 0
+	Rotation: 0 0 0
+	Scale: 20 2 .25
+	Material: BrickWall
+
+Sphere
+	Position: 8 1.5 2
+	Radius: 2
+	Rotation: 0 0 0
+	Material: Refractive
+
+Sphere
+	Position: 0 1.5 2
+	Radius: 2
+	Rotation: 0 0 0
+	Material: Refractive
+
+Sphere
+	Position: -8 1.5 2
+	Radius: 2
+	Rotation: 0 0 0
+	Material: Refractive
+
+Plane
+	Normal: 0 1 0
+	PointOnPlane: 0 0 0
+	Material: Floor

@@ -1,0 +1,73 @@
+Background: 0 0 0
+GlobalAmbient: .2 .2 .2
+
+Texture
+	Name: Tile
+	File: Textures/FloorTile.tga
+
+Texture
+	Name: BoxMan
+	File: Textures/Danbotexture.tga
+
+Material
+	Name: BoxMan
+	Specular: .1 .1 .1 1.0
+	Diffuse: .1 .1 .1 1.0
+	Ambient: .1 .1 .1 1.0
+	Glossiness: 12
+	Reflectivity: .0
+	RefractiveIndex: 1.0
+	DiffuseTextureName: BoxMan
+	UVScale: 1 1
+
+Material
+	Name: RedGloss
+	Specular: .9 .1 .1 1.0
+	Diffuse: .9 .1 .1 1.0
+	Ambient: .1 .1 .1 1.0
+	Glossiness: 128
+	Reflectivity: .8
+	RefractiveIndex: 1.0
+	DiffuseTextureName: none
+	UVScale: 1 1
+
+Material
+	Name: WhiteGloss
+	Specular: .9 .9 .9 1.0
+	Diffuse: .9 .9 .9 1.0
+	Ambient: .1 .1 .1 1.0
+	Glossiness: 128
+	Reflectivity: .5
+	RefractiveIndex: 1.0
+	DiffuseTextureName: none
+	UVScale: 1 1
+
+Camera
+	Position: 0 6 15
+	LookAt: 0 2 0
+	UpDirection: 0 1 0
+	FOV: 75
+
+PointLight
+	Color: 1 1 1
+	Position: 1 9 3
+	SurfaceRadius: 1
+	MinFalloff: 2
+	MaxFalloff: 35
+
+Sphere
+	Position: 8 2 -3
+	Radius: 2
+	Rotation: 0 0 0
+	Material: RedGloss
+
+Cube
+	Position: 1 1 5
+	Rotation: 0 50 0
+	Scale: 2 .5 .25
+	Material: RedGloss
+
+Plane
+	Normal: 0 1 0
+	PointOnPlane: 0 0 0
+	Material: WhiteGloss

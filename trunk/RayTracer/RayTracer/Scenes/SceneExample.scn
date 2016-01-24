@@ -1,0 +1,64 @@
+Background: 0 0 0
+GlobalAmbient: .2 .2 .2
+
+Texture
+	Name:
+	File:
+
+Material
+	Name:
+	Specular: - - - -
+	Diffuse: - - - -
+	Ambient: - - - -
+	Glossiness: -
+	Reflectivity: [0 - 1]
+	RefractiveIndex: -
+	DiffuseTextureName: -
+	UVScale: - -
+
+DirectionalLight
+	Color:
+	Direction:
+
+PointLight
+	Color:
+	Position:
+	SurfaceRadius:
+	MinFalloff:
+	MaxFalloff:
+
+Camera
+	Position:
+	LookAt:
+	UpDirection:
+	FOV:
+
+Model
+	ModelFile:
+	Material:
+	Position:
+	Rotation:
+	Scale:
+
+Triangle
+	V0:
+	V1:
+	V2:
+	Material:
+
+Sphere
+	Position:
+	Radius:
+	Rotation:
+	Material:
+
+Cube
+	Position:
+	Rotation:
+	Scale:
+	Material:
+
+Plane
+	Normal:
+	PointOnPlane:
+	Material:

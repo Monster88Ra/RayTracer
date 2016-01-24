@@ -1,0 +1,5 @@
+ShadowSamples: 32
+SuperSampling: 2
+Resolution: 1920 1080
+OutputImage: Teapot
+SceneFile: Scenes/Teapot.scn
