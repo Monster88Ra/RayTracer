@@ -37,3 +37,5 @@ Dowanload and open solution file.You can configurate the ImageConfig.txt and mod
 ##Examples
 
 ![pict](https://github.com/Monster88Ra/RayTracer/blob/master/trunk/RayTracer/RayTracer/RenderImages/example.png)
+
+![pict](https://github.com/Monster88Ra/RayTracer/blob/master/trunk/RayTracer/RayTracer/RenderImages/Teapot.png)
