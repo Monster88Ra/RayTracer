@@ -34,7 +34,10 @@ Dowanload and open solution file.You can configurate the ImageConfig.txt and mod
 
 * adjustable SSAA
 
-##Examples
+## License
+MIT License
+
+## Examples
 
 ![pict](https://github.com/Monster88Ra/RayTracer/blob/master/trunk/RayTracer/RayTracer/RenderImages/example.png)
 
